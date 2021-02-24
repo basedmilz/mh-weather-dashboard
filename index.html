@@ -10,60 +10,84 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-        
-        <title>Weather Dashboard</title>
-    </head>
-    
-    <body>
-        
-        <!-- Added nav bar to hold title  -->
-        <!-- <nav class="navbar navbar-dark bg-dark d-flex justify-content-center">
+
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+
+    <!-- Added nav bar to hold title  -->
+    <!-- <nav class="navbar navbar-dark bg-dark d-flex justify-content-center">
             <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
         </nav> -->
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Weather Dashboard</h1>
-                <p class="lead"></p>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Weather Dashboard</h1>
+            <p class="lead">Use the search panel to the left for your cities weather updates!</p>
+        </div>
+    </div>
+    <!-- Container for Dashboard -->
+    <div class="container"></div>
+    <div class="row">
+        <div class="col-md-3 searchColumn">
+            <form>
+                <!-- Search Bar -->
+                <h3>Search for a City:</h3>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="cityInput" placeholder="">
+                    <div class="inputCity">
+                        <button type="submit" id="submitCity" class="btn btn-primary fas fa-search"></button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- History Card -->
+            <div class="card">
+                <ul class="list-group list-group-flush" id="search-history-list">
+                    <!-- <li class="list-group-item"></li> -->
+
+                </ul>
+                <button id="clear-history" class="btn btn-sm btn-secondary hide">Clear History</button>
             </div>
         </div>
-        <!-- Container for Dashboard -->
-        <div class="container"></div>
-        <div class="row">
-            <div class="col-md-3 searchColumn">
-                <form>
-                    <h3>Search for a City:</h3>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="cityInput" placeholder="">
-                        <div class="input-group-append">
-                            <button type="submit" id="submitCity" class="btn btn-primary fas fa-search"></button>
-                        </div>
+        <div id="weather-content" class="col-12 col-md-9 hide">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Information about the City -->
+                    <div class="city-info border rounded my-3 px-3 py-3">
+                        <h2 id="current-city">City Information <small class="text-muted" id="current-date"></small></h2>
+                        <p class="mb-0">Temperature: <span id="current-temp"></span></p>
+                        <p class="mb-0">Humidity: <span id="current-humidity"></span></p>
+                        <p class="mb-0">Wind Speed: <span id="current-wind-speed"></span></p>
+                        <p>UV index: <span id="uv-index"></span></p>
                     </div>
-                </form>
-                
-                <div id="previousSearch" class="btn-group-vertical">
-                    
                 </div>
-                
             </div>
-            
-            <div class="col-md-9">
-                <div id="currentWeather">
-                    <h2>Current Weather Here</h2>
+            <div class="row">
+                <div class="col-12">
+                    <!-- 5 Day Forecast Cards -->
+                    <h3>5-Day Forecast</h3>
+
                 </div>
-                <div>
-                    <h3>5-Day Forecast:</h3>
-                    <div class="row" id="weatherForecast">
-                        
+            </div>
+            <div id="five-day-forecast" class="row">
+                <div class="col-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Date</h5>
+                            <i class="fa fa-sun"></i>
+                            <p class="card-text">Temp: </p>
+                            <p class="card-text">Humidity: </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    
-    
+    </div>
+
 </body>
 
 </html>

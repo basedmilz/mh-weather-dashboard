@@ -5,3 +5,6 @@ var currencity = '';
 currentDate = moment()
 moment().format('MMMM Do YYYY, h:mm:ss a')
 console.log (moment ())
+
+
+var inputText = document.querySelector('#text')
