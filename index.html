@@ -23,11 +23,12 @@
             <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
         </nav> -->
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
+        <div class="container"> 
             <h1 class="display-4">Weather Dashboard</h1>
             <p class="lead">Use the search panel to the left for your cities weather updates!</p>
         </div>
     </div>
+    <p id="currentTime"></p>
     <!-- Container for Dashboard -->
     <div class="container"></div>
     <div class="row">
@@ -36,7 +37,7 @@
                 <!-- Search Bar -->
                 <h3>Search for a City:</h3>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="cityInput" placeholder="">
+                    <input type="text" class="form-control" id="city-input" placeholder="Search your City">
                     <div class="inputCity">
                         <button type="submit" id="submitCity" class="btn btn-primary fas fa-search"></button>
                     </div>
@@ -58,7 +59,7 @@
                     <!-- Information about the City -->
                     <div class="city-info border rounded my-3 px-3 py-3">
                         <h2 id="current-city">City Information <small class="text-muted" id="current-date"></small></h2>
-                        <p class="mb-0">Temperature: <span id="current-temp"></span></p>
+                        <p class="mb-0">Temperature: <span id="temperature"></span></p>
                         <p class="mb-0">Humidity: <span id="current-humidity"></span></p>
                         <p class="mb-0">Wind Speed: <span id="current-wind-speed"></span></p>
                         <p>UV index: <span id="uv-index"></span></p>
